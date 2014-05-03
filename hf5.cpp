@@ -1120,12 +1120,12 @@ void onKeyboard(unsigned char key, int x, int y) {
 	}
 }
 
-long time = 0;
+long mytime = 0;
 
 void onIdle() {
 	long current = glutGet(GLUT_ELAPSED_TIME);
-	scene.update(current - time);
-	time = current;
+	scene.update(current - mytime);
+	mytime = current;
 
 	glutPostRedisplay();
 }
